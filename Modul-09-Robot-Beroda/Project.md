@@ -1,25 +1,73 @@
-# PROJECT MODUL 9: ROBOT BERODA DIFFERENTIAL DRIVE LENGKAP
+# PROJECT MODUL 9: ROBOT BERODA FLAT-PACK AKRILIK — SIAP LASER CUT
 
 ## Deskripsi
-Finalisasi desain robot beroda dan buat **design package siap produksi**.
+Finalisasi desain robot beroda flat-pack dan buat **design package siap produksi** yang akan direalisasikan di **Modul 10 (Laser Cutting)**.
 
-## Deliverables:
-1. Semua part files — minimal 12 unique parts
-2. Assembly file lengkap dengan mate benar
-3. Exploded View
-4. BOM dengan harga estimasi komponen
-5. Drawing: chassis flat pattern (untuk laser cut), part custom untuk 3D print
-6. DXF export untuk part yang akan di-laser cut
-7. STL export untuk part yang akan di-3D print
+Seluruh bodi robot dibuat dari panel-panel akrilik 2D yang disusun menjadi struktur 3D (bentuk balok/kubus) menggunakan interlocking tab-slot.
+
+---
+
+## Konsep Kunci
+- **Bodi = balok akrilik** dari panel 2D yang dirakit jadi 3D
+- **Semua part = flat** → bisa laser cut dari 1 sheet akrilik
+- **Engraving nama** pada panel top/front/side
+- **Realisasi di Modul 10** — laser cut + engrave + assembly
+
+---
+
+## Deliverables
+
+### 1. File CAD
+| Item | Qty Min | Format |
+|------|---------|--------|
+| Part files — semua panel | 10+ unique parts | .sldprt |
+| Assembly file — robot terakit | 1 | .sldasm |
+
+### 2. Manufacturing Files
+| Item | Format | Untuk |
+|------|--------|-------|
+| DXF semua panel (multi-layer: cut + engrave) | .dxf | Laser Cut (Modul 10) |
+| CorelDRAW nesting layout (semua part di 1 sheet) | .cdr | Laser Cut (Modul 10) |
+
+### 3. Dokumentasi
+| Item | Format |
+|------|--------|
+| Exploded View | Di assembly / drawing |
+| BOM dengan qty, material, sumber, proses | Excel / PDF |
+| Assembly Sequence (urutan rakit) | Dokumen / diagram |
+| Drawing Package (assembly + 3 part detail) | .slddrw / .pdf |
+| Nesting Layout (semua muat di sheet akrilik) | .cdr / screenshot |
+
+### 4. Engraving Content
+| Item | Posisi | Jenis Engrave |
+|------|--------|---------------|
+| Nama Mahasiswa | Top / Front panel | Raster engrave (hitam) |
+| NIM | Top / Front panel | Raster engrave (hitam) |
+| "ROBOT BERODA" | Top panel | Raster engrave (hitam) |
+| Logo/motif (opsional) | Top / Side panel | Vektor engrave (biru) |
+
+---
+
+## Spesifikasi Minimum
+- Bodi bentuk **balok/kubus** dari panel akrilik 3mm
+- Minimal **10 panel** (6 sisi + internal supports)
+- Semua panel menggunakan **interlocking tab-slot**
+- Slot toleransi: material thickness + 0.15mm
+- **Engraving nama** wajib pada minimal 1 panel
+- Semua part **muat di 1 sheet** akrilik (max 400×600mm)
+- Komponen: 2× motor + 2× wheel + 1× castor + Arduino
+
+---
 
 ## Kriteria Penilaian
 | Kriteria | Bobot |
 |----------|-------|
-| Kelengkapan desain | 20% |
-| Fungsionalitas mekanik | 25% |
-| Assembly benar | 20% |
-| Design for Manufacturing | 20% |
-| Drawing & Export files | 15% |
+| Kelengkapan desain panel (10+ part) | 20% |
+| Fungsionalitas mekanik (tab-slot fit, clearance) | 20% |
+| Assembly benar (semua panel terhubung) | 15% |
+| Design for Manufacturing (laser cut ready) | 15% |
+| Nesting layout efisien | 15% |
+| Engraving nama + estetika | 15% |
 
 ---
 

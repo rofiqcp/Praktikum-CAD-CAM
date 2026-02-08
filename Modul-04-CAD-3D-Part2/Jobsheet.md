@@ -1,6 +1,6 @@
-# JOBSHEET MODUL 5: CAD GAMBAR 3D — PART 2
+# JOBSHEET MODUL 4: CAD GAMBAR 3D — PART 2
 
-## Praktikum CAD/CAM — Pertemuan 5
+## Praktikum CAD/CAM — Pertemuan 4
 
 ---
 
@@ -10,6 +10,7 @@
 3. Mahasiswa mampu membuat Reference Geometry (Plane, Axis)
 4. Mahasiswa mampu menggunakan Multi-Body Part dan Combine
 5. Mahasiswa mampu membuat bentuk kompleks dengan kombinasi feature lanjutan
+6. Mahasiswa mampu membuat aksesoris profil aluminium standar industri
 
 ---
 
@@ -18,11 +19,12 @@
 |----|------------|--------|
 | 1 | Laptop/PC dengan SolidWorks | 1 unit |
 | 2 | Mouse 3-button | 1 unit |
+| 3 | Referensi: Aluminium Catalog 2020.pdf | 1 file |
 
 ---
 
 ## III. Landasan Teori
-Lihat **Materi.md** Modul 5 untuk teori lengkap feature lanjutan.
+Lihat **Materi.md** Modul 4 untuk teori lengkap feature lanjutan.
 
 ---
 
@@ -48,18 +50,24 @@ Lihat **Materi.md** Modul 5 untuk teori lengkap feature lanjutan.
 3. Analisis pembuatan Reference Plane dan cara efisien membuatnya
 4. Diskusikan Multi-Body Part vs Assembly: kapan menggunakan masing-masing?
 5. Jelaskan tantangan dalam membuat bentuk organik di SolidWorks
+6. Jelaskan pemilihan feature untuk membuat aksesoris profil aluminium (bracket, T-nut, end cap)
 
 ---
 
 ## VI. Kesimpulan
-Rangkum semua feature lanjutan dan penerapannya untuk desain kompleks.
+Rangkum semua feature lanjutan dan penerapannya untuk desain kompleks serta aksesoris profil aluminium.
 
 ---
 
 ## VII. Tugas
-### Video (10-15 menit): Materi + Demo percobaan 1-10 + Analisa
-### Pengumpulan: 10 file .sldprt + project + video + laporan → `NIM_Nama_Modul05.zip`
+### Video (12-15 menit): Materi + Demo percobaan 1-10 + Demo 2 aksesoris aluminium + Analisa
+### Pengumpulan: 10 file percobaan + 11 file project → `NIM_Nama_Modul04.zip`
+
+Deliverables:
+- 10 file percobaan: M04_P01_Vase.sldprt s/d M04_P10_MultiBody.sldprt
+- Project A (6 file): M04_A1 s/d M04_A6 (Joystick Controller)
+- Project B (5 file): M04_B1 s/d M04_B5 (Aksesoris Aluminium)
 
 ---
 
-*Jobsheet Praktikum CAD/CAM — Modul 5*
+*Jobsheet Praktikum CAD/CAM — Modul 4*

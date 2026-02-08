@@ -1,15 +1,15 @@
-# MODUL 5: CAD GAMBAR 3D — PART 2 (FEATURE LANJUTAN)
+# MODUL 4: CAD GAMBAR 3D — PART 2 (FEATURE LANJUTAN)
 
-## Praktikum CAD/CAM — Pertemuan 5
+## Praktikum CAD/CAM — Pertemuan 4
 
 ---
 
-## 5.1 Pendahuluan
+## 4.1 Pendahuluan
 Modul ini membahas feature 3D lanjutan yang memungkinkan pembuatan bentuk-bentuk kompleks yang tidak bisa dicapai dengan feature dasar saja.
 
 ---
 
-## 5.2 Feature Lanjutan
+## 4.2 Feature Lanjutan
 
 ### 5.2.1 Loft
 Membuat bentuk 3D dari beberapa profil sketch pada plane berbeda.

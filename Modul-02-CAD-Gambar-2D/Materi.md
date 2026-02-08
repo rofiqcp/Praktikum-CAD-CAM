@@ -633,5 +633,263 @@ Flange (tampak depan — profil lingkaran):
 
 ---
 
+## 2.11 Fitur Sketching Lanjutan
+
+### 2.11.1 Equations (Persamaan Parametrik)
+Equations memungkinkan dimensi dihitung secara otomatis berdasarkan rumus matematika.
+
+**Cara Membuat Equation:**
+1. `Tools → Equations` atau klik kanan dimensi → `Link Values`
+2. Format: `"D1@Sketch1" = "D2@Sketch1" * 2`
+3. Dapat menggunakan operasi: +, -, *, /, sin(), cos(), sqrt(), dll.
+
+**Contoh Penggunaan:**
+```
+"Width@Sketch1" = 100
+"Height@Sketch1" = "Width@Sketch1" / 2     → Height = 50
+"Diagonal@Sketch1" = sqrt("Width@Sketch1"^2 + "Height@Sketch1"^2)
+```
+
+**Keuntungan:**
+- Design intent terjaga otomatis
+- Perubahan satu dimensi memperbarui dimensi terkait
+- Ideal untuk design family dan standardisasi
+
+### 2.11.2 Driven Dimension (Dimensi Referensi)
+Dimensi yang hanya menampilkan nilai tanpa mengontrol geometri.
+
+**Cara Membuat:**
+1. Buat Smart Dimension seperti biasa
+2. Jika muncul dialog "Over Defined", pilih **Make Driven**
+3. Atau: Klik kanan dimensi → **Driven**
+4. Driven dimension ditampilkan dalam kurung: (50)
+
+**Penggunaan:**
+- Menampilkan dimensi hasil perhitungan
+- Referensi untuk quality control
+- Dokumentasi tanpa menambah constraint
+
+### 2.11.3 Global Variables
+Variabel yang dapat digunakan di seluruh part/assembly.
+
+**Cara Membuat:**
+1. `Tools → Equations → Add Global Variable`
+2. Beri nama (tanpa @): `Thickness = 5`
+3. Gunakan dalam dimensi: `="Thickness"`
+
+### 2.11.4 Sketch Blocks
+Menggabungkan beberapa entitas sketch menjadi satu unit yang dapat di-reuse.
+
+**Cara Membuat Block:**
+1. Pilih entitas yang ingin dijadikan block
+2. `Tools → Sketch Entities → Make Block`
+3. Block dapat disimpan dan digunakan di sketch lain
+
+**Cara Menggunakan Block:**
+1. `Tools → Sketch Entities → Insert Block`
+2. Pilih dari Design Library atau file .sldblk
+
+**Keuntungan:**
+- Komponen standar dapat di-reuse
+- Perubahan pada block memperbarui semua instance
+- Ideal untuk simbol, profil standar
+
+### 2.11.5 3D Sketch
+Sketching di ruang 3D (x, y, z) tanpa terbatas pada plane.
+
+**Cara Memulai:**
+1. `Insert → 3D Sketch` atau klik **3D Sketch** di toolbar
+2. Gunakan Tab key untuk beralih antar plane XY, YZ, XZ
+3. Entitas yang tersedia: Line, Spline, Point, Arc
+
+**Penggunaan:**
+- Path untuk Sweep 3D
+- Routing pipa/kabel
+- Guide curve untuk Loft
+
+### 2.11.6 Intersection Curve
+Membuat kurva dari perpotongan 2 surface atau plane.
+
+**Cara Membuat:**
+1. `Tools → Sketch Tools → Intersection Curve`
+2. Pilih 2 face/plane yang berpotongan
+3. Kurva hasil perpotongan menjadi entitas sketch
+
+---
+
+## 2.12 Reference Geometry untuk Sketching
+
+### 2.12.1 Reference Plane
+Membuat plane tambahan untuk sketching di posisi spesifik.
+
+**Cara Membuat:**
+1. `Insert → Reference Geometry → Plane`
+2. Pilih referensi:
+   - **Offset**: Plane paralel dengan jarak tertentu
+   - **Through Line/Point**: Plane melalui garis/titik
+   - **Parallel at Point**: Plane paralel melalui titik
+   - **Angle**: Plane dengan sudut terhadap plane lain
+   - **Normal to Curve**: Plane tegak lurus kurva
+
+### 2.12.2 Reference Axis
+Membuat sumbu referensi untuk constraint dan pattern.
+
+**Cara Membuat:**
+1. `Insert → Reference Geometry → Axis`
+2. Pilih dari: 2 plane, cylindrical face, 2 point
+
+### 2.12.3 Coordinate System
+Sistem koordinat kustom untuk orientasi dan export.
+
+---
+
+## 2.13 Engineering Drawing (Gambar Kerja 2D)
+
+### 2.13.1 Drawing Document vs Part Sketch
+| Aspek | Part Sketch | Drawing Document |
+|-------|-------------|------------------|
+| Tujuan | Membuat profil untuk 3D | Dokumentasi manufaktur |
+| Sumber | Dibuat langsung | Dari model 3D |
+| Output | Feature 3D | Print/PDF untuk produksi |
+
+### 2.13.2 Membuat Drawing dari Part
+1. `File → Make Drawing from Part`
+2. Pilih sheet size dan template
+3. Drag views dari View Palette
+
+### 2.13.3 Jenis-jenis View
+
+| View | Deskripsi |
+|------|-----------|
+| **Standard Views** | Front, Top, Right, Isometric |
+| **Projected View** | View yang diproyeksikan dari view lain |
+| **Section View** | Potongan melintang |
+| **Detail View** | Pembesaran area tertentu |
+| **Auxiliary View** | View dari sudut miring |
+| **Broken-Out Section** | Potongan lokal |
+
+### 2.13.4 Annotations (Anotasi)
+
+| Anotasi | Fungsi |
+|---------|--------|
+| **Dimension** | Ukuran (Smart Dimension, Ordinate) |
+| **Note** | Catatan teks |
+| **Balloon** | Penomoran komponen (BOM) |
+| **Surface Finish** | Simbol kekasaran permukaan |
+| **Weld Symbol** | Simbol las |
+| **Datum** | Referensi GD&T |
+| **Geometric Tolerance** | Toleransi geometrik |
+
+### 2.13.5 GD&T (Geometric Dimensioning & Tolerancing)
+
+**Simbol GD&T Dasar:**
+| Simbol | Nama | Fungsi |
+|--------|------|--------|
+| ⊕ | Position | Posisi lubang/fitur |
+| ○ | Circularity | Kebulatan |
+| ⊘ | Cylindricity | Kesilindrian |
+| ═ | Flatness | Kerataan |
+| ∠ | Angularity | Kesudutan |
+| ⫽ | Parallelism | Kesejajaran |
+| ⊥ | Perpendicularity | Ketegaklurusan |
+| ↗ | Runout | Penyimpangan putar |
+
+**Cara Menambahkan GD&T:**
+1. Di Drawing: `Insert → Annotations → Geometric Tolerance`
+2. Pilih simbol dan masukkan nilai toleransi
+3. Klik face/edge untuk menempatkan
+
+---
+
+## 2.14 Percobaan Tambahan (11-15)
+
+### Percobaan 11: Equations dan Parametric Design
+**Tujuan**: Menguasai Equations untuk design parametrik
+
+```
+Spesifikasi:
+Buat plat dengan proporsi otomatis:
+- Global Variable: "BaseWidth" = 100mm
+- Width = "BaseWidth"
+- Height = "BaseWidth" * 0.6
+- Fillet = "BaseWidth" * 0.1
+- Hole Diameter = "BaseWidth" * 0.15
+- Hole Pattern Spacing = "BaseWidth" * 0.25
+- 4 lubang dengan Linear Pattern
+
+Saat BaseWidth diubah, semua dimensi menyesuaikan otomatis.
+```
+
+### Percobaan 12: Sketch Blocks — Profil Standar
+**Tujuan**: Membuat dan menggunakan Sketch Blocks
+
+```
+Spesifikasi:
+1. Buat Block profil T-Slot (seperti di profil aluminium 2020)
+2. Simpan sebagai .sldblk
+3. Buat sketch baru, insert 4 block T-Slot
+4. Susun membentuk profil 4040 (40x40mm)
+```
+
+### Percobaan 13: 3D Sketch — Pipe Path
+**Tujuan**: Membuat path 3D untuk routing
+
+```
+Spesifikasi:
+Buat jalur pipa berbentuk L dengan:
+- Segmen 1: Horizontal 100mm (arah X)
+- Bend radius: R30
+- Segmen 2: Vertikal naik 80mm (arah Z)
+- Bend radius: R30
+- Segmen 3: Horizontal 60mm (arah Y)
+```
+
+### Percobaan 14: Drawing dari Sketch
+**Tujuan**: Membuat gambar kerja sederhana
+
+```
+Spesifikasi:
+1. Buat Drawing dari Percobaan 10 (Flange)
+2. Tambahkan views: Front, Top, Section A-A
+3. Tambahkan semua dimensi
+4. Tambahkan Title Block
+5. Export ke PDF
+```
+
+### Percobaan 15: GD&T Basic
+**Tujuan**: Menerapkan toleransi geometrik dasar
+
+```
+Spesifikasi:
+Pada Drawing Flange, tambahkan:
+- Datum A pada face bawah
+- Position tolerance Ø0.2 untuk lubang baut
+- Flatness 0.05 pada raised face
+- Perpendicularity 0.1 untuk center bore
+```
+
+---
+
+## 2.15 Tips dan Best Practices
+
+### Do's ✅
+1. Selalu mulai sketch dari Origin
+2. Gunakan constraints sebelum dimensi
+3. Buat sketch Fully Defined
+4. Gunakan Construction Lines untuk referensi
+5. Manfaatkan Mirror dan Pattern untuk efisiensi
+6. Beri nama yang deskriptif pada sketch
+7. Gunakan Equations untuk design family
+8. Simpan profil standar sebagai Blocks
+
+### Don'ts ❌
+1. Jangan membuat sketch Over Defined
+2. Jangan menggunakan Fix constraint secara berlebihan
+3. Jangan mengabaikan Design Intent
+4. Jangan membuat sketch terlalu kompleks (pecah menjadi beberapa sketch)
+5. Jangan lupa menyimpan file secara berkala
+
+---
+
 *Modul Praktikum CAD/CAM — Modul 2: CAD Gambar 2D*
 *Disusun untuk keperluan pendidikan*

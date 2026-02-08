@@ -1,33 +1,47 @@
-# PROJECT MODUL 10: PRODUK LASER CUT — DISPLAY STAND MODULAR
+# PROJECT MODUL 10: ROBOT BERODA AKRILIK — LASER CUT + ENGRAVE NAMA
 
 ## Deskripsi
-Desain dan produksi **Display Stand modular interlocking** dari akrilik menggunakan laser cutting. Project ini WAJIB dieksekusi di mesin laser.
+Fabrikasi **Robot Beroda Flat-Pack** dari akrilik menggunakan laser cutting. Semua panel dipotong dari 1 sheet akrilik, dirakit menjadi bodi 3D berbentuk balok, dengan **engraving nama, NIM, dan tulisan identitas** pada panel.
 
-## Spesifikasi:
-- Material: Akrilik 3mm
-- Desain flat-pack (bisa dirakit tanpa lem)
-- Interlocking slots
-- Minimal 5 part berbeda
-- Bisa menampilkan HP, kartu nama, atau produk kecil
-- Engraving: nama/logo
+Project ini WAJIB dieksekusi di mesin laser.
 
-## Deliverables:
-1. File SolidWorks (.sldprt) — semua part
-2. File DXF — flat pattern semua part
-3. File CorelDRAW (.cdr) — nesting layout
-4. Produk fisik hasil laser cutting
-5. Foto produk terakit
-6. Video proses eksekusi mesin (rekaman HP)
+---
+
+## Spesifikasi
+| Parameter | Nilai |
+|-----------|-------|
+| Material | Akrilik 3mm (clear atau warna) |
+| Jumlah panel minimum | 10 unique parts |
+| Teknik assembly | Interlocking tab-slot |
+| Engraving wajib | Nama + NIM + "ROBOT BERODA" |
+| Nesting | Semua muat di 1 sheet (max 400×600mm) |
+| Produk fisik | Robot terakit + name tag terpisah |
+
+---
+
+## Deliverables
+| No | Item | Format |
+|----|------|--------|
+| 1 | File SolidWorks semua panel | .sldprt |
+| 2 | File DXF semua panel (multi-layer) | .dxf |
+| 3 | File CorelDRAW nesting layout | .cdr |
+| 4 | **Produk fisik: Robot beroda akrilik** | Fisik |
+| 5 | **Produk fisik: Name tag engrave** | Fisik |
+| 6 | Foto produk (semua sisi + close-up engrave) | JPG/PNG |
+| 7 | Video proses laser + assembly (rekaman HP) | MP4 |
+
+---
 
 ## Kriteria Penilaian
 | Kriteria | Bobot |
 |----------|-------|
-| Desain dan kreativitas | 20% |
-| Ketepatan interlocking fit | 20% |
-| Kualitas laser cutting | 20% |
-| Nesting dan efisiensi material | 15% |
-| Dokumentasi (foto, video) | 15% |
-| Kebersihan finishing | 10% |
+| Desain panel dan kreativitas | 15% |
+| Ketepatan tab-slot fit (assembly) | 20% |
+| Kualitas laser cutting (edge bersih) | 20% |
+| **Kualitas engraving nama** (terbaca, estetis) | 15% |
+| Nesting dan efisiensi material | 10% |
+| Dokumentasi (foto, video proses) | 10% |
+| Kebersihan finishing dan assembly | 10% |
 
 ---
 

@@ -107,6 +107,34 @@ Ringkasan konsep kunci:
 2. Gambar 8 lubang baut pada BCD dengan Circular Pattern
 3. Lengkapi semua dimensi
 
+### Percobaan 11: Equations dan Parametric Design
+1. Buat Global Variable "BaseWidth" = 100
+2. Buat plat dengan dimensi menggunakan equation
+3. Semua proporsi relatif terhadap BaseWidth
+4. Test ubah BaseWidth → semua dimensi menyesuaikan
+
+### Percobaan 12: Sketch Blocks — Profil Standar
+1. Buat sketch profil T-Slot (alur aluminium)
+2. Make Block dan simpan sebagai .sldblk
+3. Insert 4 block, susun menjadi profil 4040
+
+### Percobaan 13: 3D Sketch — Pipe Path
+1. Insert 3D Sketch
+2. Gambar path pipa L-shape 3D
+3. Gunakan Tab untuk switch plane
+4. Tambahkan fillet pada bend
+
+### Percobaan 14: Drawing dari Sketch
+1. Make Drawing from Part (Flange)
+2. Tambahkan Standard Views + Section
+3. Tambahkan semua dimensi
+4. Export ke PDF
+
+### Percobaan 15: GD&T Basic
+1. Tambahkan Datum pada Drawing
+2. Tambahkan Position tolerance
+3. Tambahkan Flatness dan Perpendicularity
+
 ---
 
 ## V. Analisa dan Pembahasan
@@ -154,7 +182,7 @@ Tuliskan kesimpulan mencakup:
 
 ### Tugas Video (10-15 menit):
 1. **Penjelasan Materi** (5-7 menit): Jelaskan konsep sketching, dimensioning, constraints, dan sketch tools
-2. **Screen Record Percobaan 1-10** (5-7 menit): Demonstrasikan setiap percobaan dengan narasi
+2. **Screen Record Percobaan 1-15** (5-7 menit): Demonstrasikan setiap percobaan dengan narasi
 3. **Analisa & Kesimpulan** (2-3 menit)
 
 ### Ketentuan:
@@ -163,8 +191,9 @@ Tuliskan kesimpulan mencakup:
 - File: `NIM_Nama_Modul02_Video.mp4`
 
 ### Pengumpulan:
-- 10 file .sldprt (Percobaan 1-10)
+- 15 file .sldprt (Percobaan 1-15)
 - 1 file project .sldprt
+- 1 file drawing .slddrw (Percobaan 14)
 - 1 video .mp4
 - 1 laporan .pdf
 - Dikemas dalam: `NIM_Nama_Modul02.zip`
