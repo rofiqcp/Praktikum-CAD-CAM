@@ -22,56 +22,51 @@ def create_index_summary():
     ax.set_title('📐 MODUL 2: CAD GAMBAR 2D\n(12 Ilustrasi Sketching)', fontweight='bold', fontsize=14, color='blue')
     ax.axis('off')
     
-    modul2_items = [
-        ('KONSEP DASAR:', 'darkblue', 'header'),
-        ('01_entitas_sketch.png', '• Line, Rectangle, Circle, Arc, Ellipse, Slot', 'blue'),
-        ('02_sketch_constraints.png', '• Horizontal, Vertical, Parallel, Tangent, etc.', 'blue'),
-        ('03_sketch_status.png', '• Under/Fully/Over Defined (Blue/Black/Red)', 'blue'),
-        ('04_dimensioning.png', '• Linear, Angular, Radial, Reference', 'blue'),
-        ('05_sketch_tools.png', '• Offset, Trim, Mirror, Pattern tools', 'blue'),
-        ('', '', 'white'),
-        ('PROJECT & TUTORIAL:', 'darkgreen', 'header'),
-        ('07_project_panel_kontrol.png', '• Layout panel 200×150mm dengan komponen', 'green'),
-        ('08_profil_aluminium_sketches.png', '• 2020, 3030, 4040, 2040 sketches', 'green'),
-        ('09_sketching_tutorial.png', '• Step-by-step workflow sketching', 'green'),
-        ('', '', 'white'),
-        ('PANDUAN PRAKTIS:', 'darkorange', 'header'),
-        ('10_constraint_symbols_guide.png', '• Simbol constraint & penggunaan praktis', 'orange'),
-        ('11_dimensioning_practices.png', '• Best practices dimensioning', 'orange'),
-        ('12_sketch_troubleshooting.png', '• Common problems & solutions', 'orange'),
+    # Simple text-based index for Modul 2
+    y_start = 15
+    ax.text(5, y_start, 'KONSEP DASAR', ha='center', fontsize=12, fontweight='bold', color='darkblue',
+           bbox=dict(boxstyle='round', facecolor='lightblue', alpha=0.7))
+    
+    files_2 = [
+        '01_entitas_sketch.png',
+        '02_sketch_constraints.png', 
+        '03_sketch_status.png',
+        '04_dimensioning.png',
+        '05_sketch_tools.png'
     ]
     
-    y_pos = 15
-    for item, desc, color in modul2_items:
-        if not item:  # Empty line
-            y_pos -= 0.3
-            continue
-            
-        is_header = color == 'header'
-        if is_header:
-            # Header
-            header_box = FancyBboxPatch((0.2, y_pos-0.25), 9.6, 0.5, 
-                                       boxstyle="round,pad=0.1",
-                                       edgecolor=color, facecolor='white', 
-                                       linewidth=2)
-            ax.add_patch(header_box)
-            ax.text(5, y_pos, item, ha='center', va='center', fontsize=12, fontweight='bold', color=color)
-            y_pos -= 0.8
-        else:
-            # File item
-            file_box = Rectangle((0.5, y_pos-0.2), 9, 0.4, 
-                               facecolor='lightgray' if 'png' in item else 'white', 
-                               edgecolor='gray', linewidth=0.5, alpha=0.3)
-            ax.add_patch(file_box)
-            
-            if 'png' in item:
-                ax.text(0.7, y_pos, item, va='center', fontsize=9, fontweight='bold', 
-                       color='darkblue', family='monospace')
-                ax.text(0.7, y_pos-0.3, desc, va='center', fontsize=8, color=color, style='italic')
-                y_pos -= 0.9
-            else:
-                ax.text(0.7, y_pos, desc, va='center', fontsize=9, color=color)
-                y_pos -= 0.5
+    y_pos = 14
+    for f in files_2:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkblue', fontweight='bold')
+        y_pos -= 0.7
+    
+    ax.text(5, 10.5, 'PROJECT & TUTORIAL', ha='center', fontsize=12, fontweight='bold', color='darkgreen',
+           bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.7))
+    
+    files_2_project = [
+        '07_project_panel_kontrol.png',
+        '08_profil_aluminium_sketches.png',
+        '09_sketching_tutorial.png'
+    ]
+    
+    y_pos = 9.8
+    for f in files_2_project:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkgreen', fontweight='bold')
+        y_pos -= 0.7
+    
+    ax.text(5, 7.5, 'PANDUAN PRAKTIS', ha='center', fontsize=12, fontweight='bold', color='darkorange',
+           bbox=dict(boxstyle='round', facecolor='orange', alpha=0.7))
+    
+    files_2_guide = [
+        '10_constraint_symbols_guide.png',
+        '11_dimensioning_practices.png',
+        '12_sketch_troubleshooting.png'
+    ]
+    
+    y_pos = 6.8
+    for f in files_2_guide:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkorange', fontweight='bold')
+        y_pos -= 0.7
     
     # MODUL 3 Index  
     ax = axes[1]
@@ -80,61 +75,56 @@ def create_index_summary():
     ax.set_title('🔧 MODUL 3: CAD GAMBAR 3D\n(12 Ilustrasi Features)', fontweight='bold', fontsize=14, color='red')
     ax.axis('off')
     
-    modul3_items = [
-        ('FEATURE DASAR:', 'darkred', 'header'),
-        ('01_extrude_feature.png', '• Extrude Boss/Cut, End Conditions', 'red'),
-        ('02_revolve_feature.png', '• Revolve concept & requirements', 'red'),
-        ('03_fillet_chamfer.png', '• Sharp → Fillet vs Chamfer', 'red'),
-        ('04_shell_draft.png', '• Shell hollow, Draft molding', 'red'),
-        ('05_pattern_features.png', '• Linear & Circular patterns', 'red'),
-        ('06_feature_workflow.png', '• Complete 6-step workflow', 'red'),
-        ('', '', 'white'),
-        ('PROJECT & TUTORIAL:', 'darkgreen', 'header'),
-        ('07_clamp_assembly_parts.png', '• 5 parts clamp assembly design', 'green'),
-        ('08_profil_aluminium_3d.png', '• Profil 3D dari sketch 2D', 'green'),
-        ('09_feature_tutorial_complete.png', '• Plane → Sketch → Feature → Finish', 'green'),
-        ('', '', 'white'),
-        ('MANAGEMENT & PREP:', 'darkorange', 'header'),
-        ('10_feature_tree_management.png', '• Feature order & dependencies', 'orange'),
-        ('11_assembly_preparation.png', '• Dimensions, materials, naming', 'orange'),
-        ('12_advanced_features_preview.png', '• Preview Modul 4-7 (Loft, Sweep)', 'orange'),
+    # Simple text-based index for Modul 3
+    y_start = 15
+    ax.text(5, y_start, 'FEATURE DASAR', ha='center', fontsize=12, fontweight='bold', color='darkred',
+           bbox=dict(boxstyle='round', facecolor='lightcoral', alpha=0.7))
+    
+    files_3 = [
+        '01_extrude_feature.png',
+        '02_revolve_feature.png',
+        '03_fillet_chamfer.png',
+        '04_shell_draft.png',
+        '05_pattern_features.png',
+        '06_feature_workflow.png'
     ]
     
-    y_pos = 15
-    for item, desc, color in modul3_items:
-        if not item:  # Empty line
-            y_pos -= 0.3
-            continue
-            
-        is_header = color == 'header'
-        if is_header:
-            # Header
-            header_box = FancyBboxPatch((0.2, y_pos-0.25), 9.6, 0.5, 
-                                       boxstyle="round,pad=0.1",
-                                       edgecolor=color, facecolor='white', 
-                                       linewidth=2)
-            ax.add_patch(header_box)
-            ax.text(5, y_pos, item, ha='center', va='center', fontsize=12, fontweight='bold', color=color)
-            y_pos -= 0.8
-        else:
-            # File item
-            file_box = Rectangle((0.5, y_pos-0.2), 9, 0.4, 
-                               facecolor='lightgray' if 'png' in item else 'white', 
-                               edgecolor='gray', linewidth=0.5, alpha=0.3)
-            ax.add_patch(file_box)
-            
-            if 'png' in item:
-                ax.text(0.7, y_pos, item, va='center', fontsize=9, fontweight='bold', 
-                       color='darkblue', family='monospace')
-                ax.text(0.7, y_pos-0.3, desc, va='center', fontsize=8, color=color, style='italic')
-                y_pos -= 0.9
-            else:
-                ax.text(0.7, y_pos, desc, va='center', fontsize=9, color=color)
-                y_pos -= 0.5
+    y_pos = 14
+    for f in files_3:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkred', fontweight='bold')
+        y_pos -= 0.7
+    
+    ax.text(5, 10.5, 'PROJECT & TUTORIAL', ha='center', fontsize=12, fontweight='bold', color='darkgreen',
+           bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.7))
+    
+    files_3_project = [
+        '07_clamp_assembly_parts.png',
+        '08_profil_aluminium_3d.png',
+        '09_feature_tutorial_complete.png'
+    ]
+    
+    y_pos = 9.8
+    for f in files_3_project:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkgreen', fontweight='bold')
+        y_pos -= 0.7
+    
+    ax.text(5, 7.5, 'MANAGEMENT & PREP', ha='center', fontsize=12, fontweight='bold', color='darkorange',
+           bbox=dict(boxstyle='round', facecolor='orange', alpha=0.7))
+    
+    files_3_mgmt = [
+        '10_feature_tree_management.png',
+        '11_assembly_preparation.png',
+        '12_advanced_features_preview.png'
+    ]
+    
+    y_pos = 6.8
+    for f in files_3_mgmt:
+        ax.text(0.5, y_pos, f, fontsize=9, family='monospace', color='darkorange', fontweight='bold')
+        y_pos -= 0.7
     
     # Usage instructions at bottom
     fig.text(0.5, 0.03, 
-            '📋 CARA PENGGUNAAN: Buka gambar sesuai topik yang dipelajari | 🎯 GOAL: Praktikan dapat menyelesaikan semua project dengan bantuan visual ini | 🔄 UPDATE: Februari 2026', 
+            '📋 CARA PENGGUNAAN: Buka gambar sesuai topik yang dipelajari | 🎯 GOAL: Praktikan dapat menyelesaikan semua project dengan bantuan visual ini', 
             ha='center', fontsize=11, fontweight='bold', style='italic', color='darkgreen',
             bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.8, pad=1))
     
