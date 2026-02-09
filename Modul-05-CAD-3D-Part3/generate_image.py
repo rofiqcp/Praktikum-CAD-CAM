@@ -238,8 +238,8 @@ def surface_modeling():
             for i, (cy, r) in enumerate([(2, 2), (5, 3), (8, 1.5)]):
                 t = np.linspace(0, np.pi, 50)
                 ax.plot(5 + r*np.cos(t), cy + r*0.2*np.sin(t), color, linewidth=2)
-            ax.plot([3, 2, 3.5], [2, 5, 8], color+'--', linewidth=1, alpha=0.5)
-            ax.plot([7, 8, 6.5], [2, 5, 8], color+'--', linewidth=1, alpha=0.5)
+            ax.plot([3, 2, 3.5], [2, 5, 8], color=color, linestyle='--', linewidth=1, alpha=0.5)
+            ax.plot([7, 8, 6.5], [2, 5, 8], color=color, linestyle='--', linewidth=1, alpha=0.5)
         elif idx == 3:  # Swept Surface
             t = np.linspace(0, 3*np.pi, 200)
             sx = 2 + t * 0.8
